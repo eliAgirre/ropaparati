@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	$(".btnMeGusta").click(function() {
+	$(".btnMeGusta").click(function(event) {
 
 		event.preventDefault();
 		var meGusta=this;

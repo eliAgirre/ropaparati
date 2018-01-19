@@ -63,7 +63,7 @@ $(document).ready(function() {
 	} // Cierre de la función dibujarImagen
 
 	// Función para enviar datos al PHP
-	$("#enviar").click(function() {
+	$("#enviar").click(function(event) {
 
 		event.preventDefault();
 

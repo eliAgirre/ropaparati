@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	$("#anadirAmigo").click(function() {
+	$("#anadirAmigo").click(function(event) {
 
 		event.preventDefault();
 		var amigo=this;
