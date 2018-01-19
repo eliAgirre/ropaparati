@@ -168,7 +168,7 @@ $(document).ready(function() {
 	}); // Cierre del click de radioButtons
 
 	// Función para enviar datos al PHP
-	$("#enviarPatron").click(function() {
+	$("#enviarPatron").click(function(event) {
 
 		event.preventDefault();
 
