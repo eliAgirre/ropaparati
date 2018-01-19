@@ -14,20 +14,21 @@
     // Sentencia SELECT
     $sql="SELECT * FROM amigos WHERE username='".$username."';";
     $select=$db->select($sql);
-    // Se recore el array de la consulta
-    foreach ($select as $key => $valor) {
-        foreach ($valor as $campo => $value) {
-            if($campo==="_idAmigo"){
-                $idAmigo=$value;
+    if($select!=null){
+        // Se recore el array de la consulta
+        foreach ($select as $key => $valor) {
+            foreach ($valor as $campo => $value) {
+                if($campo==="_idAmigo"){
+                    $idAmigo=$value;
+                }
+                if($campo==="amigo"){
+                    $amigo=$value;
+                }
             }
-            if($campo==="amigo"){
-                $amigo=$value;
-            }
-        }
-        ?>
-        <a class="btn btn-primary noAmigo" onmouseover="background(this)" onmouseout="backgroundBtn(this)" onclick="noAmigo('<?php echo htmlspecialchars($idAmigo); ?>','<?php echo htmlspecialchars($_SESSION["user"]); ?>')">
-            <span><img src="../image/delete.png"></span></a><?php
-        echo "<a  class='linkAmigo' href='../view/amigo.php?usuario=".$amigo."' target='_blank'>".$amigo."</a>";
-    } // Cierre foreach
-
+            ?>
+            <a class="btn btn-primary noAmigo" onmouseover="background(this)" onmouseout="backgroundBtn(this)" onclick="noAmigo('<?php echo htmlspecialchars($idAmigo); ?>','<?php echo htmlspecialchars($_SESSION["user"]); ?>')">
+                <span><img src="../image/delete.png"></span></a><?php
+            echo "<a  class='linkAmigo' href='../view/amigo.php?usuario=".$amigo."' target='_blank'>".$amigo."</a>";
+        } // Cierre foreach
+    }
 ?>

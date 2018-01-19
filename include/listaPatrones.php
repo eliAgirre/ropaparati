@@ -16,20 +16,22 @@
 	$select=$db->select($sql);
 	$idPatron;
 	$imagen;
-	// Se recore el array de la consulta
-    foreach ($select as $key => $valor) {
-    	echo "<div class='patron'>";
-        foreach ($valor as $campo => $value) {
-        	if($campo==="id"){
-        		$id=$value;
-        		echo "<div id=fila_".$id."></div>";
-        	}
-            if($campo==="patron"){ // Muestra la foto
-            	$imagen=$value;
-                echo "<img class='imgPatron' src='".$value."' alt='patron'/>";
+    if($select!=null){
+        // Se recore el array de la consulta
+        foreach ($select as $key => $valor) {
+            echo "<div class='patron'>";
+            foreach ($valor as $campo => $value) {
+                if($campo==="id"){
+                    $id=$value;
+                    echo "<div id=fila_".$id."></div>";
+                }
+                if($campo==="patron"){ // Muestra la foto
+                    $imagen=$value;
+                    echo "<img class='imgPatron' src='".$value."' alt='patron'/>";
+                }
             }
+            ?><center><a id="eliminar" name="eliminar" onclick="borrarPatron('<?php echo htmlspecialchars($id); ?>','<?php echo htmlspecialchars($_GET["usuario"]); ?>')" class="btn btn-primary"><span class="glyphicon glyphicon-trash"></span></a></center><?php
+            echo "</div>";
         }
-        ?><center><a id="eliminar" name="eliminar" onclick="borrarPatron('<?php echo htmlspecialchars($id); ?>','<?php echo htmlspecialchars($_GET["usuario"]); ?>')" class="btn btn-primary"><span class="glyphicon glyphicon-trash"></span></a></center><?php
-    	echo "</div>";
     }
 ?>
