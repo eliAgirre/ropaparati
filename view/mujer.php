@@ -69,14 +69,21 @@ $msg = new Messages();
                             }
                         }              
                         foreach ($usersWish as $key => $valor) {
-                            foreach ($valor as $campo2 => $value2) {
-                                foreach ($value2 as $campo3 => $dato3) {
-                                    if($campo3==="user"){
-                                        $productos[$key][$campo2]["user"]=$dato3; // Se añaden los usuarios
+                            if($valor!=null){
+                                foreach ($valor as $campo2 => $value2) {
+                                    if($value2!=null){
+                                        foreach ($value2 as $campo3 => $dato3) {
+                                            if($campo3==="user"){
+                                                $productos[$key][$campo2]["user"]=$dato3; // Se añaden los usuarios
+                                            }
+                                        }
                                     }
                                 }
                             }
+                            //echo "<script>console.log( 'Debug Objects: " . $valor . "' );</script>";
+                            //print_r($usersWish);
                         }
+
                         // Join del array codigoBarras
                         $ids = join(',',$codigoBarras);  
                         // Sentencia SELECT with array
