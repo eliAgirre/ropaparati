@@ -1,0 +1,147 @@
+/* ************************************************************************************************
+											Selector UNIVERSAL
+************************************************************************************************ */
+
+*{
+	margin: 0px;
+	padding: 0px;
+
+}
+
+/* ************************************************************************************************
+											Selectores por TIPO
+************************************************************************************************ */
+
+/* Titulo */
+h3{ margin-left: 150px; }
+
+/***********************************************************************************************
+									   		Selectores por CLASE 
+***********************************************************************************************/
+
+/* Inputs del formulario */
+.input-group { width: 330px; }
+
+/* ************************************************************************************************
+											Selectores por ID
+************************************************************************************************ */
+
+/* Link de menú, inicio */
+#home{ font-weight: normal; }
+/* Los divs del contenido */
+#contenido{ padding-top: 30px; padding-bottom: 40px; }
+#contenido div {display: inline-block; }
+/* Formulario+mapa */
+#formulario, #map{ margin-left: 200px; width: 20%; }
+/* Botón de envio de contacto */
+#enviarContact{ width:120px; background-color:grey; border:none; outline: none; margin-left:100px; }
+
+
+/* ************************************************************************************************
+											RESPONSIVE
+************************************************************************************************ */
+
+/* SMARTPHONE: ***************************************************************************/
+@media screen and (min-width: 320px)  {
+
+    h3{ margin-left: 40px; margin-top: 60px; font-size: 22px; }
+    .input-group { width: 270px; }
+    /* Margenes a los inputs de formulario de contacto */
+    #formulario > form > div:nth-child(1) > div > input { margin-bottom: 20px; }
+    #formulario > form > div:nth-child(2) > div > input { margin-bottom: 20px; }
+    #formulario > form > div:nth-child(3) > div > input { margin-bottom: 20px; }
+    #formulario > form > div:nth-child(4) > div > input { margin-bottom: 20px; }
+    #contenido{ padding-top: 10px; padding-bottom: 20px; margin-top: 0px; margin-left: 40px; }
+    #contenido div { display: block; }
+    #formulario{ margin-left: 20px; padding-top: 10px; }
+    #map iframe{ display: none; }
+    #enviarContact{ margin-top: 20px; margin-left: 70px; }
+}
+
+@media screen and (min-width: 480px){
+
+    h3{ margin-left: 70px; }
+    #contenido{ margin-left: 90px; }
+    #enviarContact{ margin-left: 80px; }
+
+}
+
+@media screen and (min-width: 640px){
+
+    h3{ margin-left: 70px; }
+    #contenido{ margin-left: 170px; }
+}
+
+/* TABLET: *****************************************************************************/
+@media screen and (min-width: 768px) {
+
+    h3{ margin-left: 50px; font-size: 25px; }  /* Titulo */
+    .input-group { width: 280px;}
+    #contenido{ margin-left: 20px; }
+    #contenido div {display: inline-block; }
+    #formulario{ margin-left: 50px; }
+    /* Tamaño del mapa */
+    #map { position:absolute; }
+    #map iframe{ display: block; }
+    #map iframe { width: 315px; height: 237px; }
+    #enviarContact{ margin-left: 75px; }    
+}
+
+@media screen and (min-width: 960px) {
+
+    h3{ margin-left: 90px; }
+    #formulario{ margin-left: 130px; }
+    #map iframe { width: 400px; height: 301px; }
+}
+
+/* NOTEBOOK: *****************************************************************************/
+@media screen and (min-width: 1024px){
+
+    h3{ margin-left: 100px; font-size: 27px;}
+    #contenido{ padding-top: 10px; padding-bottom: 15px; }
+    #formulario{ margin-left: 130px; }
+    /* Posición y el tamaño del mapa*/
+    #map { position:absolute; top:100; right:300;}
+    #map iframe { width: 450px; height: 338px; }
+
+}
+
+@media screen and (min-width: 1152px){
+
+    h3{ margin-left: 130px; }
+    #formulario{ margin-left: 170px; }
+
+}
+
+@media screen and (min-width: 1280px){
+
+    h3{ margin-left: 160px; }
+    #formulario{ margin-left: 190px; }
+    /* Margenes a los inputs de formulario de contacto */
+    #formulario > form > div:nth-child(1) > div > input { margin-bottom: 8px; }
+    #formulario > form > div:nth-child(2) > div > input { margin-bottom: 8px; }
+    #formulario > form > div:nth-child(3) > div > input { margin-bottom: 8px; }
+    #formulario > form > div:nth-child(4) > div > input { margin-bottom: 8px; }
+    #map { margin-left: 190px; }
+    #map iframe { width: 550px; height: 414px; }
+    #enviarContact{ margin-bottom: 10px; }
+}
+
+/* LAPTOP: *****************************************************************************/
+@media screen and (min-width: 1366px) {
+
+    h3{ margin-left: 190px; font-size: 30px;}
+    #formulario{ margin-left: 220px; }
+}
+
+@media screen and (min-width: 1440px) {
+
+    h3{ margin-left: 210px; }
+    #formulario{ margin-left: 240px; }
+}
+
+@media screen and (min-width: 1920px) {
+
+    h3{ margin-left: 430px; }
+    #formulario{ margin-left: 470px; }
+}

@@ -1,0 +1,109 @@
+/* ************************************************************************************************
+											Selector UNIVERSAL
+************************************************************************************************ */
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+/* ************************************************************************************************
+											Selectores por TIPO
+************************************************************************************************ */
+
+
+
+/***********************************************************************************************
+									   		Selectores por CLASE 
+***********************************************************************************************/
+
+.patron{
+
+	display: inline-block;
+	width: 17%;
+	margin-right: 20px;
+}
+
+/* ************************************************************************************************
+											Selectores por ID
+************************************************************************************************ */
+
+#misPatrones{
+
+	width: 67.5%;
+	margin-left: 240px;
+	margin-bottom: 30px; 
+	margin-top: 30px;
+}
+
+#eliminar{ 
+
+	margin-top: 10px;
+	background-color: grey;
+	border: 1px solid white;
+}
+
+#urlAmigo{ color: #333; }
+#urlAmigo:hover{ color: grey; }
+
+/* ************************************************************************************************
+											RESPONSIVE
+************************************************************************************************ */
+
+/* SMARTPHONE: ***************************************************************************/
+@media screen and (min-width: 320px)  {
+
+	h1 { margin-left: 75px; font-size: 24px; padding-top: 30px; }
+	.patron{ display: block; margin-bottom: 15px; }
+	#misPatrones{ margin-left: 110px; }
+	#eliminar{ margin-left: 50px; }
+}
+
+@media screen and (min-width: 480px){
+
+	h1, #misPatrones { margin-left: 150px; }
+}
+
+@media screen and (min-width: 640px){
+
+	h1 { margin-left: 150px; }
+	#misPatrones { margin-left: 250px; }
+}
+
+/* TABLET: *****************************************************************************/
+@media screen and (min-width: 768px) {
+
+	h1 { font-size: 27px; }
+	.patron{ display: inline-block; margin-right: 20px; width: 30%;}
+	#misPatrones{ width: 67.5%;}
+	#eliminar{ margin-left: 0px; }
+}
+
+@media screen and (min-width: 960px) {
+
+	.patron{ width: 25%; }
+}
+
+/* NOTEBOOK: *****************************************************************************/
+@media screen and (min-width: 1024px){
+
+	h1 { font-size: 30px; }
+}
+
+@media screen and (min-width: 1152px){
+
+	.patron{ width: 20%; }
+}
+
+@media screen and (min-width: 1280px){
+
+	h1 { margin-left: 170px; }
+
+}
+
+/* LAPTOP: *****************************************************************************/
+@media screen and (min-width: 1366px) {
+
+	h1 { font-size: 33px; margin-left: 200px; }
+	.patron{ width: 17.5%; }
+}

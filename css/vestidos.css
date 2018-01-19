@@ -1,0 +1,185 @@
+/* ************************************************************************************************
+											Selector UNIVERSAL
+************************************************************************************************ */
+
+*{
+	margin: 0px;
+	padding: 0px;
+
+}
+
+/* ************************************************************************************************
+											Selectores por TIPO
+************************************************************************************************ */
+
+/* Encabezado */
+h2 { margin: 13px 0px 13px 50px; }
+/* Título de las imagenes*/
+h5{ width: 150px; height: 45px; }
+
+/***********************************************************************************************
+									   		Selectores por CLASE 
+***********************************************************************************************/
+
+/* Imagenes del centro */
+.producto{ display: inline-block; margin-left: 20px; width: 200px;}
+
+/* Descripcion de las imagenes*/
+.descrip{ height: 340px; margin-bottom: 30px; }
+
+/* Tienda de las imágenes centrales */
+.tienda{
+
+	text-align: center;
+	color: black;
+	height: 290px;
+	width: 150px;
+	font-size: 30px;
+	position: absolute;
+	padding-top: 80px;
+	font-family: 'Oswald', sans-serif;
+	opacity: 0;
+	background: white;
+	cursor: pointer;
+}
+.tienda:hover { height: 290px; opacity: 0.7; }
+
+/* Cesta */
+.empty{
+	margin: 0px 0px 0px 20px;
+}
+
+/* Boton Me Gusta */
+.btnMeGusta{
+
+  background-color: white;
+  border: none;
+}
+.glyphicon-heart{ color: #B01212; }
+
+.numWish, .profileAmigo{ color: #333; text-decoration: none; }
+.numWish:hover { color: #333; text-decoration: none; }
+.profileAmigo:hover { color: #B01212; text-decoration: none; }
+.divCount{ width: 150px; margin-left: 60px; }
+
+
+/* ************************************************************************************************
+											Selectores por ID
+************************************************************************************************ */
+/* Menu *************************************/
+#linkColecciones{ font-weight: bold; }
+#home{ font-weight: normal; }
+
+/* Contenido *************************************/
+/* Divs en horizontal */
+#contenido div { display: inline-block; }
+
+/* Barra lateral ********************/
+/*Sub-barra lateral hombre+mujer*/
+#sidebar{
+
+	border-right:1px solid #eee;
+	width: 17.5%;
+	float: left;
+}
+/* Cesta */
+#cart .empty{
+
+	font-style: italic;
+	color: #a0a3ab;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+
+
+/* Menu barra lateral*/
+#menu2 a {
+
+	text-align: left;
+	color: black;
+	display: block;
+	margin-left: 100px;
+	line-height: 180%;  /* Interlineado */
+}
+/* Hover link */
+#menu2 a:hover{
+
+	color: grey;
+	text-decoration: none;
+}
+
+/* Link vestidos en negrita */
+#vestidos{
+
+	color: #8A0829;
+	font-weight: bold;
+}
+
+/* Div central ***************************/
+/* Mensajes flash */
+#message{ width: 40%; border-radius: 5px; margin-left: 160px; padding: 5px; }
+#centro{ display: inline-block; width: 60%; margin-left: 150px; margin-top: 30px; }
+
+/* Links de imagenes */ 
+#centro .shop{ text-decoration: none;}
+#centro .shop:hover{
+
+  opacity: 0.4;
+  text-decoration: none;
+}
+
+/* Div dcha ******************************/
+#rightBar{ width: 16%; float: right; display: none; }
+
+#cesta{ margin: 10px 10px 10px 10px; }
+
+/* ************************************************************************************************
+											RESPONSIVE
+************************************************************************************************ */
+
+/* SMARTPHONE: ***************************************************************************/
+@media screen and (min-width: 320px)  {
+
+  #sidebar{ border-right: none; }
+  #atras{ display: none; }
+  #menu2{ width: 208px; margin-top: 5px; margin-left: 45px; }
+  #menu2 a { display: inline-block; margin-left: 50px; }
+  #centro{ margin-top: 150px; margin-left: 45px; }
+
+}
+
+@media screen and (min-width: 480px){
+
+  #menu2{ margin-left: 120px; }
+  #centro{ margin-left: 100px; }
+}
+
+@media screen and (min-width: 640px){
+
+  h2{ margin-left: 0px; }
+  #menu2{ margin-left: 230px; }
+}
+
+/* TABLET: *****************************************************************************/
+@media screen and (min-width: 768px) {
+
+  h2{ margin-left: 47px; }
+  #menu2{ margin-left: 140px; }
+  #centro{ margin-left: 40px; }
+}
+
+@media screen and (min-width: 800px) {
+
+  #menu2{ margin-left: 250px; }
+  #centro{ margin-left: 120px; }
+}
+
+/* NOTEBOOK: *****************************************************************************/
+@media screen and (min-width: 1024px){
+
+  #sidebar{ border-right:1px solid #eee; }
+  #atras{ display: block; }
+  #menu2 { margin-left: 0px; margin-top: 0px; }
+  #menu2 a { display: block; margin-left: 100px; }
+  #centro{ margin-left: 150px; margin-top: 30px; }
+}

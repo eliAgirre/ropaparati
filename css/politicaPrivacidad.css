@@ -1,0 +1,115 @@
+/* ************************************************************************************************
+											Selector UNIVERSAL
+************************************************************************************************ */
+
+*{
+	margin: 0px;
+	padding: 0px;
+
+}
+
+/* ************************************************************************************************
+											Selectores por TIPO
+************************************************************************************************ */
+
+/* Titulo */
+h2{ margin-bottom: 30px; margin-top: 0px; }
+
+/* Texto */
+p{ text-align: justify; margin-left: 55px;}
+
+/***********************************************************************************************
+									   		Selectores por CLASE 
+***********************************************************************************************/
+
+
+
+/* ************************************************************************************************
+											Selectores por ID
+************************************************************************************************ */
+
+/* Contenido */
+#contenido{ padding-top: 30px; padding-bottom: 40px; }
+/* Los divs del contenido */
+#contenido div{ display: inline-block; }
+#column1{ width: 30%; }
+#column2{ width: 35%; }
+/* Link inicio */
+#home{ font-weight: normal; }
+
+
+
+/* ************************************************************************************************
+											RESPONSIVE
+************************************************************************************************ */
+
+/* SMARTPHONE: ***************************************************************************/
+@media screen and (min-width: 320px)  {
+
+    h2{ font-size: 22px; margin-bottom: 20px; }
+    p{ margin-left: 35px;}
+    #column1{ width: 0%; }
+    #column2{ width: 80%; margin-left: 30px; }
+}
+
+@media screen and (min-width: 480px){
+
+    #column2{ margin-left: 60px; }
+}
+
+
+/* TABLET: *****************************************************************************/
+@media screen and (min-width: 768px) {
+
+    h2{ font-size: 25px;}
+    p{ margin-left: 55px;}
+    #column1{ width: 15%; }
+    #column2{ width: 64%; margin-left: 0px;}
+}
+
+@media screen and (min-width: 960px) {
+
+    #column2{ width: 60%; margin-left: 70px;}
+}
+
+/* NOTEBOOK: *****************************************************************************/
+@media screen and (min-width: 1024px){
+
+    h2{ font-size: 27px;}
+    p{ margin-left: 66px; }
+    #contenido { padding-top: 20px; padding-bottom: 12px; }
+    #column1{ width: 20%; }
+    #column2{ width: 42.5%; }
+}
+
+@media screen and (min-width: 1152px){
+
+    p{ margin-left: 70px;}
+    #column2{ width: 40%; margin-left: 90px;}
+}
+
+@media screen and (min-width: 1280px){
+
+    h2{ margin-top: 5px; }
+    #column2{ width: 37%; margin-left: 120px;}
+}
+
+/* LAPTOP: *****************************************************************************/
+@media screen and (min-width: 1366px) {
+
+    h2{ font-size: 30px;}
+    p{ margin-left: 80px;}
+    #contenido { padding-bottom: 20px; }
+    #column2{ margin-left: 115px;}
+}
+
+@media screen and (min-width: 1440px) {
+
+    h2{ margin-top: 10px; }
+    #column2{ margin-left: 140px;}
+}
+
+@media screen and (min-width: 1920px) {
+
+    #column2{ margin-left: 200px; }
+}

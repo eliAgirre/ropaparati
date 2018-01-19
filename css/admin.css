@@ -1,0 +1,228 @@
+/* ************************************************************************************************
+											Selector UNIVERSAL
+************************************************************************************************ */
+
+*{
+	margin: 0px;
+	padding: 0px;
+
+}
+
+/* ************************************************************************************************
+											Selectores por TIPO
+************************************************************************************************ */
+/* Encabezado con el fondo blanco */
+header{ background: white; }
+
+/* Título del contenido */
+h2{ 
+	margin-left: 470px; 
+	margin-bottom: 30px; 
+}
+
+/* Menu */
+ul .dropdown-menu { width: 115px; }
+ul #colec { width: 140px; }
+
+/***********************************************************************************************
+									   		Selectores por CLASE 
+***********************************************************************************************/
+
+/* Menu *************************************/
+.navbar {
+
+	background: white;
+	border: none;
+}
+
+.navbar-nav { margin-left: 470px; }
+
+/* Inputs of forms admin */
+.input-group { width:330px; }  
+
+/* Botones de selección */
+.selection select{
+
+	border-radius: 5px;
+	width: 150px;
+	padding: 3px;
+	background: transparent;
+	border: 1px solid #ccc;
+	color: #848484;
+}
+
+/* ************************************************************************************************
+											Selectores por ID
+************************************************************************************************ */
+
+/* Menu *************************************/
+#ropa:hover{ content: url(../../image/glyphicons-dress-black.png); }
+#colecciones:hover{ content: url(../../image/glyphicons-season-black.png); }
+
+/* Form Añadir User, Form Añadir Colección */
+#formUser, #formColeccion, #formProducto { margin-left: 525px; }
+#formUser input, #formColeccion input, #formProducto input, #formProducto textarea { border-radius: 5px;}
+
+/* Botón añadir user, Botón añadir colección */
+#anadir{
+
+	width: 120px;
+	background-color: grey;
+	border: none;
+	outline: none;
+	margin-left: 100px;
+
+}
+/* Input  oculto para subir imagen del producto */
+#div_file input {
+
+   filter: alpha(opacity=0);
+   opacity: 0;
+}
+
+#selectColec select, #selectCategoria select { 
+
+	border-radius: 5px;
+	width: 270px;
+	padding: 3px;
+	background: transparent;
+	border: 1px solid #ccc;
+	color: #848484;
+
+}
+
+
+/* ************************************************************************************************
+											RESPONSIVE
+************************************************************************************************ */
+
+/* SMARTPHONE: ***************************************************************************/
+@media screen and (min-width: 320px)  {
+
+	h2{ margin-left: 20px; }
+	.navbar-nav { margin-left: 0px; }
+	.thPass, .thDescrip, .thColec, .thSex { display: none;} /* Ocultar columnas de la tabla */
+	.input-group { width: 270px; }
+	#editarProducto .modal .fade .in{ padding-left: 2px; }
+	#editarProducto .modal-dialog{ width: 360px; }
+	#imgProduct { width: 70px; }
+	#imgLogo { width: 150px; } /* Imagen corporativa*/
+	#logo{ margin-left: 2px; }
+	#linkUsu { margin-left: 60px; }
+	#formUser, #formColeccion, #formProducto { margin-left: 50px; }
+}
+
+@media screen and (min-width: 480px){
+
+	#imgLogo { width: 200px; }
+	#logo{ margin-left: 15px; } 
+	#linkUsu { margin-left: 100px; }
+	#formUser, #formColeccion, #formProducto { margin-left: 70px; }
+	#editarProducto{ padding-left: 0px; }
+	#editarProducto .modal-dialog{ width: 400px; }
+}
+
+@media screen and (min-width: 640px){
+
+	h2{ margin-left: 110px; }
+	.thPass, .thDescrip, .thColec, .thSex { display: table-cell; } /* Mostrar columnas de la tabla */
+	#logo{ margin-left: 150px; }
+	#linkUsu { margin-left: 150px; } 
+	#formUser, #formColeccion, #formProducto { margin-left: 150px; }
+
+}
+
+/* TABLET: *****************************************************************************/
+@media screen and (min-width: 768px) {
+
+	h2 { margin-left: 200px; margin-top: 0px; margin-bottom: 20px; } /* Título */
+	/* Menu */
+	ul .dropdown-menu { width: 100px; }
+	ul #colec { width: 125px; }
+	/* Menu nav */
+	.navbar { margin-bottom: 0px; }
+	.navbar-nav { margin-left: 160px; }
+	.navbar-nav > li > a { padding: 8px; }
+	/* Formularios div */
+	.form-group { margin-bottom: 6px; }
+	.input-group { width: 280px; }
+	/* Imagen corporativa */
+	#logo{ margin-left: 260px; } 
+	/* Link usuarios */
+	#linkUsu{ margin-left: 140px; } 
+	/* Formulaios */
+	#formUser, #formColeccion, #formProducto{ margin-left: 225px; }
+	#selectColec select, #selectCategoria select { width: 280px; }
+
+}
+
+@media screen and (min-width: 960px) {
+	
+	h2{ margin-left: 250px }
+	.navbar-nav { margin-left: 275px; } /* Menu nav */
+	#logo{ margin-left: 400px; }
+	#formUser, #formColeccion, #formProducto { margin-left: 310px; }
+
+}
+
+/* NOTEBOOK: *****************************************************************************/
+@media screen and (min-width: 1024px){
+
+	h2 { margin-left: 275px; margin-top: 20px; margin-bottom: 30px; } /* Título */
+	/* Menu nav */
+	.navbar-nav { margin-left: 290px; }
+	.input-group { width: 330px; }
+	/* Imagen corporativa */
+	#logo{ margin-left: 415px; } 
+	/* Botón de alta */
+	#botonAlta{ margin-left: 165px; }
+	/* Link usuarios */
+	#linkUsu{ margin-left: 200px; } 	
+	/* Menú admin */
+	#acolapsar { 
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	/* Formulaios */
+	#formUser, #formColeccion, #formProducto{ margin-left: 325px; }
+	#selectColec select, #selectCategoria select { width: 330px; }
+	#imgProduct { width: 149px; }
+}
+
+@media screen and (min-width: 1152px){
+
+	h2{ margin-left: 320px }
+	.navbar-nav { margin-left: 370px; } /* Menu nav */
+	#logo{ margin-left: 500px; }
+	#linkUsu { margin-left: 225px; }
+	#formUser, #formColeccion, #formProducto { margin-left: 390px; }
+}
+
+@media screen and (min-width: 1280px){
+
+	h2{ margin-left: 390px }
+	.navbar-nav { margin-left: 430px; } /* Menu nav */
+	#logo{ margin-left: 550px; }
+	#linkUsu { margin-left: 325px; }
+	#formUser, #formColeccion, #formProducto { margin-left: 450px; }
+
+}
+
+/* LAPTOP: *****************************************************************************/
+@media screen and (min-width: 1366px) {
+
+	h2{ margin-left: 430px }
+	.navbar-nav { margin-left: 470px; } /* Menu nav */
+	#logo{ margin-left: 590px; }
+	#linkUsu { margin-left: 340px; } 
+	#formUser, #formColeccion, #formProducto { margin-left: 490px; }
+}
+
+@media screen and (min-width: 1440px) {
+
+	h2{ margin-left: 470px }
+	.navbar-nav { margin-left: 520px; } /* Menu nav */
+	#logo{ margin-left: 620px; }
+	#linkUsu { margin-left: 400px; }
+	#formUser, #formColeccion, #formProducto { margin-left: 540px; }
+}

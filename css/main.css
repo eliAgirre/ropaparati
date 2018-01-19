@@ -1,0 +1,343 @@
+/* ************************************************************************************************
+											Selector UNIVERSAL
+************************************************************************************************ */
+
+*{
+	margin: 0px;
+	padding: 0px;
+
+}
+
+/* ************************************************************************************************
+											Selectores por TIPO
+************************************************************************************************ */
+
+footer a{ 
+	
+	margin-left: 20px;
+	color: black; 
+}
+
+footer a:hover{ 
+
+	color: grey;
+	text-decoration: none;
+}
+
+/***********************************************************************************************
+									   		Selectores por CLASE 
+***********************************************************************************************/
+
+
+/* ************************************************************************************************
+											Selectores por ID
+************************************************************************************************ */
+
+/* Layout ************************************/
+#container{ width: 100%; }
+
+/* Encabezado ************************************/
+#header{
+
+	position: relative;
+	z-index: 2;
+	display: -webkit-box; /* Chrome*/
+	-webkit-box-orient: horizontal; /* encabezado en horizontal */
+}
+
+/* Imagen corporativa */
+#logo{
+
+	margin-left: 625px;
+	opacity: 0.9;
+}
+
+#imgLogo{
+	content: url(../image/logo.jpg);
+	width: 200px;
+}
+
+/* Botones de header*/
+#botonAlta{ margin-left: 375px; }
+#linkUsu{ margin-left: 400px; }
+
+#botonLogueo{ margin-top: 10px; }
+
+#botonAlta, #botonLogin, #botonSalir{
+
+	background-color: white;
+	color: black; 
+	border: none;
+	opacity: 0.8;
+	outline:none;
+
+}
+
+#botonAlta:hover, #botonLogin:hover, #botonSalir:hover{
+
+	background-color: #BDBDBD;
+	color: white; 
+	border: none;
+	opacity: 0.8;
+	outline:none;
+
+}
+
+/* Link user */
+#linkUsu{color: black;}
+#linkUsu:hover {
+
+	color: grey;
+	text-decoration: none; 	
+}
+
+/* Menú ************************************/
+/* Botón oculto para aparecer el menú */
+#pull{ display: none; }
+
+#menu_nav ul{ margin-left: 475px; width: 700px; }
+
+#menu_nav li{ display: inline-block; } /* Menú en horizontal */
+
+#menu_nav ul a{ 
+
+	color: black;
+	padding-left: 50px; 
+}
+
+#menu_nav ul a:hover{ 
+
+	color: grey;
+	text-decoration: none;
+}
+
+/* Link Incio */
+/*#home{ font-weight: bold; }*/
+#inicio{ font-weight: bold; }
+
+/* Input del buscador */
+#search input[type="text"] {
+
+	outline: none;
+    background:   url(../image/busca.png) no-repeat 10px 6px #7F7E7E;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #7F7E7E;
+    opacity: 0.9;
+    font-size: 13px;
+    color: #7F7E7E;
+    width: 180px;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+    margin-left: 314px;
+}
+
+/* Focus del buscador */
+#search input[type="text"]:focus { width: 188px; }
+
+/* Imagenes centrales *************************/
+
+#coleccionesA{ 
+
+	height: 207px;
+	width: 226px;
+	content: url(../image/web/coleccionesA.jpg);
+}
+
+#campanas{
+
+	height: 207px;
+	width: 226px;
+	content: url(../image/web/campanas.jpg);
+}
+
+#coleccionesB{
+
+	height: 207px;
+	width: 226px;
+	content: url(../image/web/coleccionesB.jpg);
+}
+
+#blog{
+
+	height: 207px;
+	width: 226px;
+	content: url(../image/web/blog.jpg);
+}
+
+#coleccionesA:hover, #campanas:hover, #coleccionesB:hover, #blog:hover{ opacity: 0.4; }
+
+
+/* Footer ************************************/
+#otrosEnlaces{
+
+	padding-top: 10px;
+	margin-left: 480px;
+}
+
+/* ************************************************************************************************
+											RESPONSIVE
+*************************************************************************************************** */
+
+/* SMARTPHONE: ***************************************************************************/
+@media screen and (min-width: 320px)  {
+
+    /*Después de aparecer el menú, aparece el icono */
+    nav a #pull:after { display: block; }
+	#imgLogo { width: 150px; } /* Imagen corporativa*/
+	#logo{ margin-left: 2px; }
+	#botonAlta { margin-left: 10px; } /* Boton de logueo*/
+	#linkUsu { margin-left: 30px; }
+	/* Aparece el botón para desplegar el menú */
+	#menu_nav { height: auto; }
+    #pull {
+        display: block;
+        position: absolute;
+        left: 8px;
+        top: 70px;
+    }
+    #menu_nav ul { display: none; margin-left: 50px; margin-top: 50px; width: 20%; margin-bottom: 0px; }
+    #menu_nav ul a { padding-left: 0px; }
+    /* Buscador */
+	#search input[type="text"] { 
+
+		margin-top: 5px;
+		margin-left: 0px;
+		height: 25px;
+		background:   url(../image/busca.png) no-repeat 6px 2px;
+		width: 150px;		
+	}
+	#search input[type="text"]:focus { width: 160px; }
+	#contenido{ margin-top: 30px; }
+    /* Footer */
+	#otrosEnlaces{ margin-left: 105px; margin-top: 10px; margin-bottom: 10px;}
+	#otrosEnlaces a { display: block; }
+}
+
+@media screen and (min-width: 480px){
+
+	#imgLogo { width: 200px; }
+	#logo{ margin-left: 15px; } 
+	#botonAlta { margin-left: 30px; }
+	#linkUsu { margin-left: 100px; }
+	#pull { margin-left: 30px; }
+	#menu_nav ul { margin-left: 70px; }
+	#otrosEnlaces{margin-left: 160px; } /* Footer */
+}
+
+@media screen and (min-width: 640px){
+
+	#logo{ margin-left: 150px; } 
+	#botonAlta { margin-left: 60px; }
+	#pull { margin-left: 15px; }
+	#menu_nav ul { width: 15%; }
+	#otrosEnlaces{ margin-left: 240px; } /* Footer */
+
+}
+
+/* TABLET: *****************************************************************************/
+@media screen and (min-width: 768px) {
+
+	#logo{ margin-left: 280px; }
+	#botonAlta { margin-left: 50px; }
+	#menu_nav ul { width: 10%; }
+	/* Footer */
+	#otrosEnlaces a { display: inline-block; }
+	#otrosEnlaces{ margin-left: 150px; }
+}
+
+@media screen and (min-width: 800px) {
+
+	#logo{ margin-left: 315px; }
+	#botonAlta { margin-left: 80px; }
+	#otrosEnlaces{ margin-left: 200px; }
+}
+
+@media screen and (min-width: 960px) {
+
+	#logo{ margin-left: 400px; }
+	#botonAlta { margin-left: 100px; }
+	#otrosEnlaces{ margin-left: 265px; }
+}
+
+/* NOTEBOOK: *****************************************************************************/
+@media screen and (min-width: 1024px){
+	/* Encabezado */
+	#logo{ margin-left: 440px; }
+	#botonAlta { margin-left: 130px; }
+	#linkUsu { margin-left: 155px; }
+	/* Menú responsive no visible */
+	#pull{ display: none; }
+	/* Menu horizontal visible */
+	#menu_nav ul { display: block; margin-left: 290px; margin-top: 0px; width: 71%; margin-bottom: 0px; }
+	#menu_nav ul a{ padding-left: 50px; }
+	/* Buscador */
+	#search input[type="text"] {
+
+	    background:   url(../image/busca.png) no-repeat 10px 6px;
+	    width: 180px;
+	    height: 32px;
+		margin-left: 65px;
+		margin-top: 0px;
+	}
+	#search input[type="text"]:focus { width: 188px; }
+	#contenido { margin-top: 0px; }
+	#otrosEnlaces{ margin-left: 299px; }
+}
+
+@media screen and (min-width: 1152px){
+
+	#logo{ margin-left: 500px; }
+	#botonAlta { margin-left: 200px; }
+	#linkUsu { margin-left: 225px; }
+	#menu_nav ul { margin-left: 350px; width: 69%; }
+	#search input[type="text"] { margin-left: 135px; } /* Buscador */
+	#otrosEnlaces{ margin-left: 357.5px; }
+}
+
+@media screen and (min-width: 1280px){
+
+	#logo{ margin-left: 550px; }
+	#botonAlta { margin-left: 300px; }
+	#linkUsu { margin-left: 325px; }
+	#menu_nav ul { margin-left: 400px; width: 67%; }
+	#search input[type="text"] { margin-left: 235px; } /* Buscador */
+	#otrosEnlaces{ margin-left: 419px; }
+}
+
+/* LAPTOP: *****************************************************************************/
+@media screen and (min-width: 1366px) {
+
+	#logo{ margin-left: 590px; }
+	#botonAlta { margin-left: 320px; }
+	#linkUsu { margin-left: 340px; }
+	#menu_nav ul{ margin-left: 440px; }
+	#search input[type="text"] { margin-left: 255px; } /* Buscador */
+	#otrosEnlaces{ margin-left: 450px; }
+}
+
+@media screen and (min-width: 1440px) {
+
+	#logo{ margin-left: 620px; }
+	#botonAlta { margin-left: 380px; }
+	#linkUsu { margin-left: 400px; }
+	#menu_nav ul{ margin-left: 480px; }
+	#search input[type="text"] { margin-left: 305px; } /* Buscador */
+	#otrosEnlaces{ margin-left: 490px; }
+}
+
+@media screen and (min-width: 1920px) {
+
+	#logo{ margin-left: 850px; }
+	#botonAlta { margin-left: 480px; }
+	#linkUsu { margin-left: 500px; }
+	#menu_nav ul{ margin-left: 720px; }
+	#menu_nav ul a{ padding-left: 50px; }
+	#search input[type="text"] { margin-left: 395px; } /* Buscador */
+	#otrosEnlaces{ margin-left: 720px; }
+}

@@ -1,0 +1,85 @@
+/* ************************************************************************************************
+											Selector UNIVERSAL
+************************************************************************************************ */
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+/* ************************************************************************************************
+											Selectores por TIPO
+************************************************************************************************ */
+
+
+
+/***********************************************************************************************
+									   		Selectores por CLASE 
+***********************************************************************************************/
+
+/* Links */
+.linkAmigo { color: black; text-decoration: none; }
+.linkAmigo:hover { color: grey; text-decoration: none; }
+
+/* Boton borrar */
+.noAmigo { 
+
+	background-color: grey;
+	border: none;
+	outline: none;
+	margin-right: 7px;
+	margin-bottom: 7px;
+	opacity: 0.7;
+}
+
+/* ************************************************************************************************
+											Selectores por ID
+************************************************************************************************ */
+
+/* Span user */
+#iconoUser{ color: #5BBFA7; }
+
+/* Lista de amigos */
+#listaAmigos{ margin-left: 77px; margin-top: 20px; margin-bottom: 20px; }
+
+
+/* ************************************************************************************************
+											RESPONSIVE
+************************************************************************************************ */
+
+/* SMARTPHONE: ***************************************************************************/
+@media screen and (min-width: 320px)  {
+
+	h1 { margin-left: 80px; font-size: 24px; padding-top: 30px; }
+}
+
+@media screen and (min-width: 480px)  {
+
+	h1 { margin-left: 110px; }
+	#listaAmigos{ margin-left: 107px; }
+}
+
+@media screen and (min-width: 640px)  {
+
+	h1 { margin-left: 204px; }
+	#listaAmigos{ margin-left: 223px; }
+}
+
+/* TABLET: *****************************************************************************/
+@media screen and (min-width: 768px) {
+
+	h1 { margin-left: 268px; }
+	#listaAmigos{ margin-left: 267px; }
+}
+
+@media screen and (min-width: 800px) {
+
+	h1 { margin-left: 301px; }
+	#listaAmigos{ margin-left: 300px; }
+}
+
+@media screen and (min-width: 960px) {
+
+	h1 { margin-left: 383px; }
+	#listaAmigos{ margin-left: 380px; }
+}

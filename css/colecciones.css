@@ -1,0 +1,257 @@
+/* ************************************************************************************************
+											Selector UNIVERSAL
+************************************************************************************************ */
+
+*{
+	margin: 0px;
+	padding: 0px;
+
+}
+
+/* ************************************************************************************************
+											Selectores por TIPO
+************************************************************************************************ */
+
+/* Encabezado */
+h3{ display: none; }
+
+/***********************************************************************************************
+									   		Selectores por CLASE 
+***********************************************************************************************/
+
+/* Texto de las imágenes centrales */
+.text {
+
+	height: 272px;
+	width: 200px;
+	position: absolute;
+	text-align: center;
+	padding-top: 80px;
+	margin-top: 60px;
+	font-size: 50px;
+	font-family: 'Oswald', sans-serif;
+	color: black;
+}
+
+.text:hover { opacity: 2; }
+
+/* Cesta */
+.empty{
+	margin: 0px 0px 0px 20px;
+}
+
+
+/* ************************************************************************************************
+											Selectores por ID
+************************************************************************************************ */
+
+/* Menu ******************************************/
+#linkColecciones{ font-weight: bold; }
+#home{ font-weight: normal; }
+
+/* Contenido *************************************/
+/* Divs en horizontal */
+#contenido{
+
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+#contenido div{ display: inline-block; }
+
+
+/* Barra lateral *********************************/
+#leftBar{
+
+	width: 31%;
+	text-align: center;
+}
+#leftBar a {
+
+	text-align: left;
+	color: black;
+	display: block;
+	width: 31%;
+	margin-left: 130px;
+	line-height: 180%;  /* Interlineado */
+}
+
+#leftBar a:hover{
+
+	color: grey;
+	text-decoration: none;
+}
+
+/* Div central *********************************/
+#centro{ display: inline-block; width: 60%; margin-left: 150px;}
+
+/* Links de imagenes */ 
+#centro a{ text-decoration: none;}
+#centro a:hover{
+
+	opacity: 0.4;
+	text-decoration: none;
+}
+
+/* Imagenes del centro */
+#imgMujer, #imgHombre{ 
+
+	position: relative; 
+	height: 272px;
+	width: 200px;
+}
+/* Texto de la iḿagen del hombre */
+#hombre .text { margin-left: 12.5px; }
+
+/* Div dcha **********************************/
+#rightBar{ width: 16%; float: right; display: none; }
+
+/* Cesta */
+#cart .empty{
+
+	font-style: italic;
+	color: #a0a3ab;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+
+
+/* ************************************************************************************************
+											RESPONSIVE
+************************************************************************************************ */
+
+/* SMARTPHONE: ***************************************************************************/
+@media screen and (min-width: 320px)  {
+	/* Titulo */
+	h2{ display: none; }
+	h3{ display: block; margin-left: 17px; }
+	/* Texto de las imágenes centrales */
+	.text {
+		margin-left: 20px;
+		padding-top: 20px;
+		height: 201px;
+		width: 140px;
+		font-size: 30px;
+	}
+	#contenido{ padding-top: 10px; }
+    #leftBar{ width: 0%; }   
+    #leftBar a { display: none; }    
+    /* Imagenes del centro */
+    #centro, #centroM { width: 100%; display: inline-block; margin-left: 0px; }
+	#imgMujer, #imgHombre{
+
+		height: 201px;
+		width: 140px;
+	}
+	#imgMujer{ margin-left: 20px; }
+	#imgHombre{ margin-left: 10px; }
+}
+
+@media screen and (min-width: 480px){
+
+	h3 { margin-left: 50px; }
+	.text {margin-left: 80px; }
+	#contenido{ margin-left: 15px; }
+	#centro, #centroM { width: 100%; display: inline-block; }
+	#imgMujer{ margin-left: 80px; }
+	#imgHombre{ margin-left: 20px; }
+}
+
+@media screen and (min-width: 640px){
+
+	.text {margin-left: 100px; }
+	#imgMujer{ margin-left: 100px; }
+	#imgHombre{ margin-left: 50px; }
+	#hombre .text { margin-left: 55px; }
+}
+
+/* TABLET: *****************************************************************************/
+@media screen and (min-width: 768px) {
+
+	.text {
+		margin-left: 180px; 
+		font-size: 45px;
+		padding-top: 30px;
+	}
+	#hombre .text { margin-left: 85px; }
+	/* Imagenes del centro */
+	#imgMujer, #imgHombre{
+
+		height: 272px;
+		width: 200px;
+	}
+	#imgMujer{ margin-left: 150px; }
+	#imgHombre{ margin-left: 60px; }
+}
+
+@media screen and (min-width: 800px) {
+
+	.text {margin-left: 230px; }
+	#hombre .text { margin-left: 40px; }
+	/* Imagenes del centro */
+	#imgMujer{ margin-left: 200px; }
+	#imgHombre{ margin-left: 20px; }
+}
+
+@media screen and (min-width: 960px) {
+
+	h3 { margin-left: 60px; }
+	.text {margin-left: 300px; }
+	#imgMujer{ margin-left: 270px; }
+}
+
+/* NOTEBOOK: *****************************************************************************/
+@media screen and (min-width: 1024px){
+
+	h2{ display: block; width: 280px; }
+	h3 { display: none; margin-left: 0px; }
+	.text {
+		margin-left: 30px; 
+		padding-top: 90px;
+	}
+	#contenido { margin-top: 0px; padding-bottom: 20px; margin-left: 0px; }
+	#leftBar{ width: 31%; }
+	#leftBar a { display: block; margin-left: 100px; }
+	#centro, #centroM{ width: 53%; display: inline-block; margin-left: 0px; }
+	/* Imagenes del centro */
+	#imgMujer, #imgHombre{ 
+
+		height: 272px;
+		width: 200px;
+		margin-top: 60px;
+	}
+	#imgMujer{ margin-left: 0px; }
+	#imgHombre{ margin-left: 0px; }
+}
+
+@media screen and (min-width: 1152px){
+
+	#centro{  margin-left: 22.5px; }
+	#hombre .text { margin-left: 30px; }
+}
+
+@media screen and (min-width: 1280px){
+
+	#centro{  margin-left: 35px; }
+	#imgHombre{ margin-left: 12.5px; }
+	#hombre .text { margin-left: 40px; }
+}
+
+/* LAPTOP: *****************************************************************************/
+@media screen and (min-width: 1366px) {
+
+	#centro, #centroM{  margin-left: 42.5px; }
+}
+
+@media screen and (min-width: 1440px) {
+
+	#centro{  margin-left: 57.5px; }
+	#centroM{ margin-left: 150px; }
+}
+
+@media screen and (min-width: 1920px) {
+
+	#leftBar{ margin-left: 50px; }
+	#centro{  margin-left: 97.5px; }
+	#centroM{ margin-left: 170px; }
+}

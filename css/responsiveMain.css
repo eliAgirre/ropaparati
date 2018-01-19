@@ -1,0 +1,155 @@
+/* ************************************************************************************************
+											RESPONSIVE
+************************************************************************************************ */
+
+/* SMARTPHONE: ***************************************************************************/
+@media screen and (min-width: 320px)  {
+
+	#menu_nav { height: 42px; }
+	#menu_nav ul{ margin-left: 0px; margin-top: 0px; width: 100%; display: block; }
+	/* Menu, se ocultan varios links */
+	#home, #linkColecciones, #linkCampanas, #linkBlog { display: none; }
+	/* Buscador */
+	#search input[type="text"] {
+
+	    background:   url(../image/busca.png) no-repeat 10px 6px;
+	    width: 180px;
+	    height: 32px;
+	    margin-left: 155px;
+		margin-top: 10px;		
+	}
+	#search input[type="text"]:focus { width: 188px; }
+	#contenido{ margin-top: 0px; }
+	/* Imagenes centrasles */
+	#coleccionesA, #campanas, #coleccionesB, #blog{ 
+
+		height: 147px;
+		width: 160px;
+	}
+}
+
+@media screen and (min-width: 480px){
+	/* Buscador */
+	#search input[type="text"] { 
+		margin-left: 240px;
+		margin-top: 10px;
+	}
+}
+
+@media screen and (min-width: 640px){
+	/* Buscador */
+	#search input[type="text"] { 
+		margin-left: 405px;
+		margin-top: 10px;
+	}
+	/* Imagenes centrasles */
+	#coleccionesA, #campanas, #coleccionesB, #blog{ 
+
+		height: 165px;
+		width: 180px;
+	}
+}
+
+/* TABLET: *****************************************************************************/
+@media screen and (min-width: 768px) {
+
+	/* Buscador */
+	#search input[type="text"] { 
+		margin-left: 525px;
+		margin-top: 10px;
+	}
+	/* Imagenes centrasles */
+	#coleccionesA, #campanas, #coleccionesB, #blog{ 
+
+		height: 221px;
+		width: 240px;
+	}
+}
+
+@media screen and (min-width: 800px) {
+
+	#logo{ margin-left: 315px; }
+	#botonAlta { margin-left: 90px; }
+	/* Buscador */
+	#search input[type="text"] { 
+		margin-left: 600px;
+		margin-top: 10px;
+	}
+	#otrosEnlaces{ margin-left: 200px; }
+}
+
+@media screen and (min-width: 960px) {
+
+	#logo{ margin-left: 400px; }
+	#botonAlta { margin-left: 100px; }
+	/* Buscador */
+	#search input[type="text"] { 
+		margin-left: 695px;
+		margin-top: 10px;
+	}
+	#otrosEnlaces{ margin-left: 230px; }
+}
+
+/* NOTEBOOK: *****************************************************************************/
+@media screen and (min-width: 1024px){
+
+	#logo{ margin-left: 440px; }
+	#botonAlta { margin-left: 130px; }
+	#menu_nav ul{ margin-left: 275px; width: 700px;}
+	/* Aparece el menu */
+	#home, #linkColecciones, #linkCampanas, #linkBlog { display: inline-block; }
+	/* Buscador */
+	#search input[type="text"] { 
+		margin-left: 80px;
+		margin-top: 0px;
+	}
+
+}
+
+@media screen and (min-width: 1152px){
+
+	#logo{ margin-left: 500px; }
+	#botonAlta { margin-left: 200px; }
+	#menu_nav ul { margin-left: 350px; width: 69%; }
+	#search input[type="text"] { margin-left: 135px; } /* Buscador */
+	#otrosEnlaces{ margin-left: 345px; }
+}
+
+@media screen and (min-width: 1280px){
+
+	#logo{ margin-left: 550px; }
+	#botonAlta { margin-left: 250px; }
+	#menu_nav ul{ margin-left: 400px; }
+	#search input[type="text"] { margin-left: 185px; } /* Buscador */
+	#otrosEnlaces{ margin-left: 400px; }
+}
+
+/* LAPTOP: *****************************************************************************/
+@media screen and (min-width: 1366px) {
+
+	#logo{ margin-left: 590px; }
+	#botonAlta { margin-left: 320px; }
+	#menu_nav ul{ margin-left: 440px; }
+	#search input[type="text"] { margin-left: 255px; } /* Buscador */
+	#otrosEnlaces{ margin-left: 440px; }
+}
+
+@media screen and (min-width: 1440px) {
+
+	#logo{ margin-left: 620px; }
+	#botonAlta { margin-left: 380px; }
+	#menu_nav ul{ margin-left: 480px; }
+	#menu_nav ul a{ padding-left: 50px; }
+	#search input[type="text"] { margin-left: 305px; } /* Buscador */
+	#otrosEnlaces{ margin-left: 480px; }
+}
+
+@media screen and (min-width: 1920px) {
+
+	#logo{ margin-left: 850px; }
+	#botonAlta { margin-left: 480px; }
+	#menu_nav ul{ margin-left: 720px; }
+	#menu_nav ul a{ padding-left: 50px; }
+	#search input[type="text"] { margin-left: 395px; } /* Buscador */
+	#otrosEnlaces{ margin-left: 720px; }
+}

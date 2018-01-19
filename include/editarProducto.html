@@ -1,0 +1,97 @@
+<div class="modal fade" id="editarProducto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content" style="margin-top:15%;">
+            
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4>Modificar producto</h4>
+            </div>
+            <!-- Mostrar el mensaje flash -->
+            <?php echo "<div id='mostrarMsg'>"; echo $msg->display(); echo "</div>"; ?>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="panel-body">
+                        <form name="editarProducto" role="form" method="post" action="../../model/admin/modificarProducto.php" enctype="multipart/form-data" >
+                            <!--Input codigo de barras -->
+                            <div class="form-group">
+                                <label for="product">Código</label>
+                                <div class="input-group">
+                                    <input id="cod" type="text" name="codigo" class="form-control" 
+                                    style="border-radius: 5px;" readOnly="true">
+                                </div>
+                            </div>
+                            <!--Input Nombre producto -->
+                            <div class="form-group">
+                                <label for="product">Nombre del producto</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span>
+                                        <img src='../../image/glyphicons-dress-black.png'></span></span>
+                                    <input id="nameProduct" type="text" name="nombreProduct" class="form-control">
+                                </div>
+                            </div>
+                            <!--Input descripción -->
+                            <div class="form-group">
+                                <label for="product">Descripción</label>
+                                <div class="input-group">
+                                    <textarea id="descrip" type="text" class="form-control" name="descripcion" required></textarea>
+                                </div>
+                            </div><br/>
+                            <!--select colección -->
+                            <div class="form-group">
+                                <label for="product">Colección</label>
+                                <div id="selectColec" class="input-group">
+                                <?php 
+                                    // Se importa la conexión con la base de datos
+                                    require_once '../../config/database.php';
+                                    $db = new Database();
+                                    $db->connect();
+                                    // Sentencia SELECT
+                                    $sql="SELECT * FROM colecciones";
+                                    $select=$db->select($sql);?>
+                                    <select id="colecEdit" name="nameColec" required> <option value="" selected="selected"></option><?php
+                                    // Si la tabla tiene resultados
+                                    if($select){
+                                        // Se muestran los datos de cada usuario
+                                        foreach ($select as $key => $valor) {
+                                            foreach ($valor as $campo => $value) {
+                                                if($campo==="nombreColeccion"){
+                                                    echo "<option value=".$value." selected='selected;'>".$value."</option>";
+                                                }
+                                            }
+                                        }
+
+                                    }// Cierre de if si tiene resultados
+                                ?></select>
+                                </div><br/>
+                                <!--Input precio -->
+                                <div class="form-group">
+                                    <label for="product">Precio</label>
+                                    <div class="input-group">
+                                        <input type="text" id="precio" name="precio" class="form-control" placeholder="Precio" style="border-radius: 5px;">
+                                    </div>
+                                </div>
+                                <!--Input foto -->
+                                <div class="form-group">
+                                    <label for="product"></label>
+                                    <div id="div_file" class="input-group">
+                                        <p style="height: 0px;width: 200px;"><span class="glyphicon glyphicon-picture">
+                                        </span><b> Añade una imagen</b></p>
+                                        <input type="file" name="subirProducto" />
+                                    </div>
+                                </div>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" class="btn btn-success" 
+                                style="font-size:16px;margin-top:8px;">
+                                <span class="glyphicon glyphicon-arrow-left"></span> Atras
+                            </button>
+                            <button type="submit" name="modificarProducto" id="modificarProducto" class="btn btn-primary"
+                                    style="background:grey;border:none;" value="upload"> Modificar</button>
+                        </form>
+                    </div>                           
+                </div>
+            </div> <!-- Cierre de la clase modal-body -->
+
+        </div> <!-- modal-content -->
+    </div>
+</div> <!-- Cierre de la Ventana Modal Editar nombre -->

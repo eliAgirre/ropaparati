@@ -1,0 +1,46 @@
+<div class="modal fade" id="editarUsuario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog" style="width:300px;">
+
+        <div class="modal-content" style="margin-top:30%;">
+            
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4>Cambio de usuario</h4>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+                    <div class="panel-body">
+                        <form name="editarNombre" role="form" method="post" action="../model/editarUsuario.php" 
+                        onSubmit="return revisarEditarNombre();">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Nuevo nombre</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                    <input type="text" name="nombre" class="form-control" placeholder="Nuevo nombre" maxlength="8" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Contraseña</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                    <input type="password" name="password" class="form-control" maxlength="15" placeholder="Contraseña para verificar" required>
+                                </div>
+                            </div>
+                            <br/>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" class="btn btn-success" 
+                                style="font-size:16px;margin-top:8px;">
+                                <span class="glyphicon glyphicon-arrow-left"></span> Atras
+                            </button>
+                            <button type="submit" name="editNombre" class="btn btn-primary" style="background:grey;border:none;">
+                                <span class="glyphicon glyphicon-user"></span> Modificar</button>
+                            <p><br/></p>
+                        </form>
+                    </div>                           
+                </div>
+            </div> <!-- Cierre de la clase modal-body -->
+
+        </div> <!-- modal-content -->
+    </div>
+</div> <!-- Cierre de la Ventana Modal Editar nombre -->

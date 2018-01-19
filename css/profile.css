@@ -1,0 +1,448 @@
+/* ************************************************************************************************
+											Selector UNIVERSAL
+************************************************************************************************ */
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+/* ************************************************************************************************
+											Selectores por TIPO
+************************************************************************************************ */
+
+
+
+/***********************************************************************************************
+									   		Selectores por CLASE 
+***********************************************************************************************/
+
+.profile, .profileAmigo { margin-left: 200px; }
+.profileAmigo { margin-bottom: 180px;}
+
+/* Profile div en horizontal */
+.box {
+
+	float: left;
+	width: 300px;
+	margin: 1em;
+}
+.after-box { clear: left; }
+
+/* Radio buttons publico si/no */
+.patron { width: 100px; }
+.col-xs-12 { width: 280px; }
+.col-md-6 { padding-left: 0px; }
+
+/* Bara lateral *****************************/
+/* Lista de deseos */
+.glyphicon-heart { color: #B01212; }
+.linkGustar, .linkAmigo { color: black; text-decoration: none; }
+.linkGustar:hover, .linkAmigo:hover { color: grey; text-decoration: none; }
+
+.noGustaProducto, .noAmigo { 
+
+	background-color: grey;
+	border: none;
+	outline: none;
+	margin-right: 7px;
+	margin-bottom: 7px;
+	opacity: 0.7;
+}
+
+/* ************************************************************************************************
+											Selectores por ID
+************************************************************************************************ */
+/* Menu *************************************/
+#home{ font-weight: normal; }
+
+/* Perfil de usuario ************************/
+/* Titulo de perfil */
+#perfilTitulo{ margin-bottom: 50px; }
+
+/* Foto */
+#avatar, #avatarUser { 
+
+	margin-left: 100px;
+	width: 20%;
+}
+
+/* Añadir foto canvas ************************/
+#areaCanvas{ margin-bottom: 10px; }
+/* Cargar la foto */
+#enviar, #div_file{
+
+ 	position:relative;
+	width: 130px;
+	background-color: white;
+	-webkit-border-radius:5px;
+	
+}
+/* Subir imagen está oculto*/
+#div_file input {
+
+   filter: alpha(opacity=0);
+   opacity: 0;
+}
+
+/* Botones bnw&color*/
+#bnw,#colour{
+    
+	border: 1.7px solid grey;
+	border-radius: 4px;
+	background: none;
+	color: grey;
+	padding: 5px;
+	font-weight: bold;
+}
+
+/* Subir patron *********************************/
+#patron{
+	 
+	position: absolute;
+	float: right;
+	margin-top: 150px;
+	margin-left: 555px;
+	width: 130px;
+	background-color: white;
+	-webkit-border-radius:5px;
+}
+
+#patron input { filter: alpha(opacity=0); opacity: 0; }
+
+#enviarPatron {
+
+	width: 120px;
+	background-color: white;
+	-webkit-border-radius:5px;
+	
+}
+
+#radios{ margin-top: 15px; margin-bottom: 15px; }
+
+/* Lista de patrones (lateral) **********************/
+#listaPatrones, #listaPatronesAmigo{ position: absolute; margin-left: 885px; }
+
+#tituloLista, #tituloListaAmigo{ margin-left: 885px; }
+
+#masPatrones a:hover, #masWish a:hover{ text-decoration: none;}
+
+#tituloDeseos { margin-left: 1100px; font-weight: bold; margin-bottom: 10px; height: 19px; margin-top: 8px; }
+#listaDeseos{ position: absolute; margin-left: 1100px; margin-top: 9px;}
+
+#tituloDeseosAmigo{ position: absolute; top: -0px; margin-top: 50px; font-weight: bold; margin-left: 100px; }
+#listaDeseosAmigo{ position: absolute; top: -0px; margin-top: 80px; }
+
+#tituloAmigos { position: absolute; top: -0px; font-weight: bold; margin-left: 1075px; margin-top: 320px;}
+#listaAmigos { position: absolute; top: -0px; margin-left: 1075px; margin-top: 370px; }
+
+#tituloAmigosAmigo{ position: absolute; top: -0px; margin-top: 50px; font-weight: bold; margin-left: 100px; }
+#listaAmigosAmigo{ position: absolute; top: -0px; margin-top: 80px; }
+
+
+/* Boton amigo **************************************/
+#anadirAmigo{ width: 150px; height: 35px; background-color: #A4A4A4; border: none; }
+#amigo{ width: 150px; height: 35px; background-color: #A0E7D7; border: none; }
+/* Icono amigo */
+#iconoUser { color: #5BBFA7; }
+
+/* Mensajes flash */
+#message{ width: 40%; border-radius: 5px; margin-left: 160px; padding: 5px; }
+
+/* ************************************************************************************************
+											RESPONSIVE
+************************************************************************************************ */
+
+/* SMARTPHONE: ***************************************************************************/
+@media screen and (min-width: 320px)  {
+	/* Titulo */
+	h1 { margin-left: 50px; font-size: 24px; }
+	/* Parte de perfil */
+	.profile { 
+		margin-left: 0px; 
+		margin-top: 0px; 
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-orient: vertical;
+	    flex-direction: column;
+	    -webkit-box-align: start;;
+	    -webkit-align-items: flex-start;
+	    align-items: flex-start;
+	}
+	.profile #avatarUser, .profileAmigo #avatar{
+	    -webkit-box-ordinal-group: 2;
+	    order: 1;
+	}
+	.profileAmigo{ margin-left: 40px; }
+	.editarDatos{ margin-top: 0px; width: 390px; margin-bottom: 0px; }
+	#perfilTitulo { margin-top: 55px; margin-bottom: 15px; }
+	#infoUser{ margin-left: 40px; }
+	#fotoPerfil{ width: 120px; }
+	#avatarUser{margin-left: 110px; width: 60%;}
+	#avatar { margin-left: 60px; margin-bottom: 330px; }
+	#subirImagen { width: 300px; }
+	#patron{ margin-left: 110px; margin-top: 30px; position: relative; }
+	#tituloLista {margin-left: 110px; font-weight: bold;}
+	#tituloListaUrl { display: none; }
+	#listaPatrones {margin-left: 110px; position: relative;}
+	#tituloListaAmigo, #listaPatronesAmigo{ display: none; }
+	#tituloListaUrlAmigo{ display: block; margin-left: 70px; margin-top: 240px; position: absolute; font-weight: bold; font-size: 16px; }
+	#tituloListaUrlAmigo a, #tituloListaDeseos a, #tituloListaUrl a, #tituloListaAmigos a{ color: black; }
+	#tituloListaUrlAmigo a:hover, #tituloListaDeseos a:hover, , #tituloListaUrl a:hover, #tituloListaAmigos a:hover { color: grey; text-decoration: none; }
+	#tituloDeseosAmigo{ position: absolute; top: 0px; margin-top: 445px; font-weight: bold; margin-left: 60px; }
+	#listaDeseosAmigo{ position: absolute; top: 0px; margin-top: 480px; margin-left: 70px; }
+	#tituloDeseos, #listaDeseos{ display: none; }
+	#tituloAmigos, #listaAmigos { display: none; }
+	#tituloListaDeseos{margin-left: 100px;padding-top: 15px;}
+	#tituloAmigosAmigo{ margin-top: 590px; margin-left: 58px; }
+	#listaAmigosAmigo { margin-top: 620px; margin-left: 70px; }
+	#tituloListaAmigos{margin-left: 100px;}
+	#message{ width: 65%; margin-left: 50px; }
+}
+
+@media screen and (min-width: 480px){
+
+	.profile { margin-left: 100px; }
+	.profileAmigo{ margin-left: 80px; }
+	#perfilTitulo { margin-top: 40px; }
+	#infoUser{ margin-left: 60px; }
+	#avatar{ margin-left: 60px; margin-bottom: 220px; }
+	#patron, #tituloLista, #listaPatrones{ margin-left: 75px; }
+	#tituloListaAmigo, #listaPatronesAmigo{ display: none; }
+	#tituloListaUrlAmigo{ margin-left: 70px; margin-top: 240px; }
+	#tituloListaDeseos{ margin-left: 60px; }
+	#tituloListaAmigos {margin-left: 60px; }
+	#message{ margin-left: 100px; }
+}
+
+@media screen and (min-width: 640px){
+
+	h1 { margin-left: 60px; } 
+	.profileAmigo{ margin-left: 80px; }
+	.editarDatos{ width: 400px; }
+	#infoUser{ margin-left: 90px; }
+	#avatarUser{ margin-left: 105px; }
+	#avatar{ margin-left: 60px; margin-bottom: 50px; }
+	#patron, #tituloLista, #listaPatrones { margin-left: 105px; }
+	#tituloListaUrlAmigo{ display: block; margin-left: 70px; margin-top: 230px; font-weight: normal; }
+	#tituloListaAmigo, #listaPatronesAmigo{ display: none; }
+	#tituloDeseosAmigo{ margin-top: 160px; margin-left: 300px; }
+	#listaDeseosAmigo{ margin-top: 190px; margin-left: 300px; }
+	#tituloListaDeseos{ margin-left: 90px; }
+	#tituloListaAmigos {margin-left: 90px; }
+	#tituloAmigosAmigo { margin-top: 324px; margin-left: 300px; }
+	#listaAmigosAmigo { margin-top: 353px; margin-left: 300px; }
+	#message{ width: 67.5%; margin-top: 10px; margin-left: 130px; }
+}
+
+/* TABLET: *****************************************************************************/
+@media screen and (min-width: 768px) {
+
+	/* Titulo */
+	h1 { font-size: 27px; }
+	/* Parte de perfil */
+	.profile, .profileAmigo{ 
+		margin-left: 75px;
+		margin-top: 60px; 
+		box-orient: horizontal;
+		-webkit-box-orient: horizontal;
+		position: relative;
+	}
+	.profile #avatarUser {
+	    -webkit-box-ordinal-group: 2;
+	    order: 0; 
+	}
+	.profile .editarDatos {
+	    -webkit-box-ordinal-group: 2;
+	    order: 1;
+	}
+	.editarDatos{ position: absolute; top: 0; right: 0; margin-top: 80px; width: 350px;}
+	#contenido{ margin-bottom: 50px; }
+	/* Titulo */
+	#perfilTitulo { margin-bottom: 20px; }
+	#fotoPerfil{ display: none; }
+	#avatarUser{ margin-left: 60px; }
+	#avatar { margin-bottom: 50px; }
+	/* Datos del usuario */
+	#infoUser{ margin-left: 20px; }
+	/* Area canvas */
+	#areaCanvas { margin-bottom: 0px; }
+	#patron{ margin-left: 350px; position: absolute; top: -0px; margin-top: 270px; }
+	#listaPatrones, #listaPatronesAmigo { display: none; }
+	#tituloListaUrl{ display: block; margin-left: 20px; margin-top: 10px; }
+	#tituloListaDeseos{ display: block; margin-left: 20px; margin-bottom: 12px; margin-top: 12px;}
+	#tituloListaUrlAmigo{ display: block; margin-left: 70px; margin-top: 230px; }
+	#tituloLista, #tituloListaAmigo{ display: none; }
+	#tituloDeseosAmigo, #listaDeseosAmigo { margin-left: 350px; }
+	#tituloDeseosAmigo{ margin-top: 60px; }
+	#listaDeseosAmigo{ margin-top: 100px; }
+	#tituloListaAmigos {margin-left: 20px; }
+	#tituloAmigosAmigo { margin-top: 223px; margin-left: 350px; }
+	#listaAmigosAmigo { margin-top: 252px; margin-left: 350px; }
+	#message{ width: 45%; margin-top: 10px; margin-left: 220px; }
+}
+
+
+@media screen and (min-width: 800px) {
+
+	.profileAmigo{ margin-bottom: 50px; }
+	#tituloListaUrlAmigo{ display: none; }
+	#avatar { margin-left: 60px; margin-bottom: 190px;}
+	#tituloListaUrl { margin-left: 20px; }
+	#tituloListaUrlAmigo{ margin-left: 130px; }
+	#patron{ margin-left: 380px }
+	#tituloListaAmigo{ font-weight: bold; }
+	#tituloListaAmigo, #listaPatronesAmigo{ display: block; margin-left: 290px; }
+	#tituloDeseosAmigo{ margin-top: 45px; margin-left: 520px; }
+	#listaDeseosAmigo { margin-top: 80px; margin-left: 520px; }
+	#tituloListaAmigos {margin-left: 20px; }
+	#tituloAmigosAmigo { margin-top: 240px; margin-left: 520px; }
+	#listaAmigosAmigo { margin-top: 270px; margin-left: 520px; }
+	#message{ width: 50%; margin-left: 220px; }
+}
+
+@media screen and (min-width: 960px) {
+
+	.editarDatos{ width: 450px;}
+	#avatar { margin-left: 100px; margin-bottom: 190px;}
+	#tituloListaUrl { margin-left: 20px; margin-top: 10px; }
+	#patron{ margin-left: 440px;  }
+	#tituloListaAmigo, #listaPatronesAmigo{ margin-left: 330px; }
+	#tituloDeseosAmigo, #listaDeseosAmigo { margin-left: 630px; }
+	#tituloListaAmigos { margin-left: 20px; }
+	#tituloAmigosAmigo, #listaAmigosAmigo { margin-left: 630px; }
+	#message{ width: 45%; margin-left: 285px; }
+}
+
+/* NOTEBOOK: *****************************************************************************/
+@media screen and (min-width: 1024px){
+
+	h1 { font-size: 30px; }
+	.profile, .profileAmigo{ margin-top: 30px; }
+	.editarDatos{ width: 670px; margin-top: 110px;}
+	#avatar { margin-left: 60px; margin-bottom: 190px;}
+	#patron{ margin-left: 280px; margin-top: 275px; }
+	#tituloListaUrl{ margin-top: 15px; }
+	#tituloListaAmigo, #listaPatronesAmigo{ margin-left: 380px; font-weight: bold;}
+	#tituloDeseosAmigo, #listaDeseosAmigo { margin-left: 630px; }
+	#tituloListaDeseos { display: none; }
+	#tituloDeseos, #listaDeseos { display: block; position: absolute; top: -0; margin-left: 642px;}
+	#tituloDeseos{ margin-top: 100px; }
+	#listaDeseos{ margin-top: 140px; }
+	#tituloListaAmigos {margin-left: 20px; margin-top: 15px;}
+	#tituloAmigosAmigo,#listaAmigosAmigo { margin-left: 630px; }
+	#message{ width: 48%; margin-left: 285px; }
+}
+
+@media screen and (min-width: 1088px){
+
+	#avatar{ margin-bottom: 190px; }
+	#tituloListaAmigo, #listaPatronesAmigo{ margin-left: 380px; }
+	#tituloDeseosAmigo, #listaDeseosAmigo { margin-left: 720px; }
+	#patron{ margin-left: 340px; }
+	#tituloDeseos, #listaDeseos { margin-left: 710px; }
+	#tituloListaAmigos {margin-left: 20px; margin-top: 15px;}
+	#tituloAmigosAmigo, #listaAmigosAmigo { margin-left: 720px; }
+}
+
+
+@media screen and (min-width: 1152px){
+
+	h1 { margin-left: 0px; }
+	.editarDatos{ width: 860px; }
+	#avatar, #avatarUser { margin-left: 0px; }
+	#avatar{ margin-bottom: 190px;}
+	#patron{ margin-left: 220px; margin-top: 210px; }
+	#tituloListaUrl, #tituloListaUrlAmigo{ display: none; }
+	#tituloLista, #listaPatrones { display: block; position: absolute; top: -0; margin-left: 544px; }
+	#tituloLista{ margin-top: 100px; }
+	#listaPatrones{ margin-top: 140px; }
+	#tituloDeseos, #listaDeseos { margin-left: 800px; }
+	#tituloListaAmigo, #listaPatronesAmigo{ margin-left: 480px; }
+	#tituloDeseosAmigo, #listaDeseosAmigo { margin-left: 750px; }
+	#tituloListaAmigos{ display: none; }
+	#tituloAmigos, #listaAmigos { display: block; }
+	#tituloAmigos { position: absolute; top: -0px; font-weight: bold; margin-left: 800px; margin-top: 320px;}
+	#listaAmigos { position: absolute; top: -0px; margin-left: 800px; margin-top: 360px; }
+	#tituloAmigosAmigo,#listaAmigosAmigo { margin-left: 750px; }
+	#tituloListaAmigo, #listaPatronesAmigo{ margin-left: 435px; }
+	#message{ margin-left: 320px; }
+
+}
+
+@media screen and (min-width: 1216px){
+
+	.editarDatos{ width: 930px; }
+	#avatar{ margin-bottom: 190px;}
+	#tituloLista, #listaPatrones { margin-left: 640px; }
+	#tituloDeseos, #listaDeseos, #tituloAmigos, #listaAmigos { margin-left: 840px; }
+	#tituloLista, #listaPatrones { margin-left: 545px; }
+	#tituloListaAmigo, #listaPatronesAmigo{ margin-left: 440px; }
+	#tituloAmigosAmigo,#listaAmigosAmigo { margin-left: 750px; }
+}
+
+@media screen and (min-width: 1280px){
+
+	h1 { margin-left: 170px; }
+	.editarDatos{ width: 830px; }
+	#avatar, #avatarUser { margin-left: 170px; }
+	#avatar{ margin-bottom: 190px;}
+	#patron{ margin-left: 370px; }
+	#tituloLista, #listaPatrones { margin-left: 712px; }
+	#tituloDeseos, #listaDeseos, #tituloAmigos, #listaAmigos { margin-left: 961px; }
+	#tituloListaAmigo, #listaPatronesAmigo{ margin-left: 480px; }
+	#tituloDeseosAmigo, #listaDeseosAmigo { margin-left: 750px; }
+	#tituloAmigosAmigo,#listaAmigosAmigo { margin-left: 750px; }
+	#message{ margin-left: 320px; }
+
+}
+
+/* LAPTOP: *****************************************************************************/
+@media screen and (min-width: 1366px) {
+
+	h1 { font-size: 33px; margin-left: 200px; }
+	.editarDatos{ width: 890px; }
+	#avatar, #avatarUser { margin-left: 200px; }
+	#avatar{ margin-bottom: 190px;}
+	#patron{ margin-left: 394px; }
+	#tituloLista, #listaPatrones { margin-left: 756px; }
+	#tituloDeseos, #listaDeseos, #tituloAmigos, #listaAmigos { margin-left: 1010px; }
+	#tituloListaAmigo, #listaPatronesAmigo{ margin-left: 530px; }
+	#tituloDeseosAmigo, #listaDeseosAmigo { margin-left: 800px; }
+	#tituloAmigosAmigo,#listaAmigosAmigo { margin-left: 800px; }
+	#message{ width: 52%; margin-left: 359px;}
+}
+
+@media screen and (min-width: 1440px) {
+
+	.editarDatos{ width: 910px; }
+	#avatar { margin-left: 200px; margin-bottom: 190px; }
+	#patron{ 
+		position: absolute; 
+	    margin-top: 207px;
+	    margin-left: 460px;
+	}
+	/* Lista de patrones + deseos + amigos (lateral) **********************/
+	#tituloLista, #listaPatrones { margin-left: 800px; }
+	#tituloDeseos, #listaDeseos { margin-left: 1075px; }
+	#tituloListaAmigo, #listaPatronesAmigo{ margin-left: 570px; }
+	#tituloDeseosAmigo { margin-left: 840px; margin-top: 50px; }
+	#listaDeseosAmigo { margin-left: 840px; margin-top: 83px;}
+	#tituloAmigos { margin-left: 1075px; margin-top: 320px;}
+	#listaAmigos { margin-left: 1075px; margin-top: 370px; }
+	#tituloAmigosAmigo{ margin-left: 1145px; margin-top: 45px; }
+	#listaAmigosAmigo{ margin-top: 80px; margin-left: 1145px;}
+	#message{ margin-left: 356px; }
+}
+
+@media screen and (min-width: 1920px) {
+
+	.editarDatos{ width: 1390px; }
+	#tituloListaAmigo { margin-left: 590px; }
+	#avatar { margin-left: 250px; }
+	#tituloDeseos, #listaDeseos, #tituloAmigos, #listaAmigos { margin-left: 1125px; }
+	#listaPatronesAmigo { margin-left: 640px; }
+	#tituloDeseosAmigo, #listaDeseosAmigo { margin-left: 900px; }
+	#tituloAmigosAmigo, #listaAmigosAmigo { margin-left: 1190px; }
+}

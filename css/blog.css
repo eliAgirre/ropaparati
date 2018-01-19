@@ -1,0 +1,92 @@
+/* ************************************************************************************************
+                                        Selector UNIVERSAL
+************************************************************************************************ */
+
+*{
+  margin: 0px;
+  padding: 0px;
+
+}
+
+/* ************************************************************************************************
+                                        Selectores por TIPO
+************************************************************************************************ */
+
+a{ color: #686868; }
+
+a:hover{ color: #6e97bf; text-decoration: none; }
+
+
+/* ************************************************************************************************
+                                        Selectores por CLASE
+************************************************************************************************ */
+
+.post{ 
+
+  text-align: justify; 
+  margin-bottom: 17.5px;   
+}
+
+.date{ color: #6e97bf; }
+
+.title{
+
+  font-weight: bold; 
+  text-decoration: underline; 
+  color: black; 
+  font-size: 16px; 
+}
+
+.title:hover{ 
+
+  color: #6e97bf; 
+  text-decoration: 
+  underline; 
+}
+
+/* ************************************************************************************************
+                                        Selectores por ID
+************************************************************************************************ */
+/* Links del menu */
+#home{ font-weight: normal; }
+#linkBlog{ font-weight: bold; }
+
+#contenido div{ display: inline-block; }
+#leftBar{ width: 30%; }
+#centroB{ width: 45%; display: block;}
+
+
+/* ************************************************************************************************
+                                            RESPONSIVE
+************************************************************************************************ */
+
+/* SMARTPHONE: **************************************************************************/
+@media screen and (min-width: 320px)  {  
+
+  #contenido div{ display: inline-block; }
+  #centroB{ width: 60%; }
+  #leftBar{ width: 20%; }
+  #footer{ margin-bottom: 10px; }
+  #otrosEnlaces{ display: none; }
+
+}
+
+@media screen and (min-width: 480px){
+
+  #footer{ margin-bottom: 0px; }
+  #otrosEnlaces{ display: block; }
+
+}
+
+@media screen and (min-width: 640px){
+
+  #centroB{ width: 57.5%; }
+}
+
+/* TABLET: *******************************************************************************/
+@media screen and (min-width: 768px) {
+
+  #centroB{ width: 45%; }
+  #leftBar{ width: 30%; }
+}
+
