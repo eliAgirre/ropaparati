@@ -25,10 +25,10 @@
                 <center><table border="2" bordercolor="white">
                     <tr><!-- Fila 1 -->
                         <td>
-                            <a href="view/colecciones.php"><img id="coleccionesA" alt="Colecciones"></a>
+                            <a href="view/colecciones.php"><img src="../image/web/coleccionesA.jpg" id="coleccionesA" alt="Colecciones"></a>
                         </td>
                         <td>
-                            <a href="view/campanas.php"><img id="campanas" alt="Campañas"></a>
+                            <a href="view/campanas.php"><img src="../image/web/campanas.jpg" id="campanas" alt="Campañas"></a>
                         </td> 
                         <!--<td rowspan="2">
                             <a href="rsc.php"><img id="rsc" alt="RSC"></a>
@@ -36,10 +36,10 @@
                     </tr>
                     <tr><!-- Fila 2 -->
                         <td>
-                            <a href="view/colecciones.php"><img id="coleccionesB" alt="Colecciones"></a>
+                            <a href="view/colecciones.php"><img src="../image/web/coleccionesB.jpg" id="coleccionesB" alt="Colecciones"></a>
                             </td>
                         <td>
-                            <a href="view/blog.php"><img id="blog" align="center" alt="Blog"></a>
+                            <a href="view/blog.php"><img src="../image/web/blog.jpg" id="blog" align="center" alt="Blog"></a>
                         </td>                        
                     </tr>
                 </table></center>
