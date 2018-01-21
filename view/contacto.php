@@ -23,35 +23,35 @@
                     <form method="post" role="form" action="../model/contacto.php">
                         <!--Input titulo -->
                         <div class="form-group">
-                            <label for="usr" style="text-align: left;">Asunto</label>
+                            <label for="usr" style="text-align: left;">Asunto</label><br>
                             <div class="input-group">
                                 <input type="text" class="form-control" placeholder="Asunto" name="asunto" style="border-radius: 5px;" required>
                             </div>
                         </div>
                         <!--Input nombre -->
                         <div class="form-group">
-                            <label for="usr">Nombre</label>
+                            <label for="usr">Nombre</label><br>
                             <div class="input-group">
                                 <input class="form-control" placeholder="Nombre" name="nombre" style="border-radius: 5px;" required>
                             </div>
                         </div>
                         <!--Input apellido -->
                         <div class="form-group">
-                            <label for="usr">Apellido</label>
+                            <label for="usr">Apellido</label><br>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="usr" placeholder="Apellido" name="apellido" style="border-radius: 5px;" required>
                             </div>
                         </div>
                         <!--Input email-->
                         <div class="form-group">
-                            <label for="usr">Email</label>
+                            <label for="usr">Email</label><br>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="usr" placeholder="Email" name="email" style="border-radius: 5px;" required>
                             </div>
                         </div>
                         <!--Input mensaje-->
                         <div class="form-group">
-                            <label for="usr">Mensaje</label>
+                            <label for="usr">Mensaje</label><br>
                             <div class="input-group">
                                 <textarea type="text" class="form-control" rows="3" id="usr" placeholder="Escriba el mensaje, por favor" name="mensaje" style="border-radius: 5px;" required></textarea>
                             </div>
