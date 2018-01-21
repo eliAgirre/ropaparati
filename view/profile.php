@@ -151,7 +151,7 @@ if(!(isset($_SESSION['id_user']) && $_SESSION['user']!='')){
                             $select2=$db->select($sql2);
                             $nPatrones=count($select2);
                             // Se recore el array de la consulta
-                            if($nWish!=0){
+                            if($nPatrones!=0){
                                 foreach ($select as $key => $valor) {
                                     foreach ($valor as $campo => $value) {
     
