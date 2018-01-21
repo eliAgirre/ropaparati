@@ -80,15 +80,17 @@ if(!(isset($_SESSION['id_user']) && $_SESSION['user']!='')){
                             $sql2="SELECT * FROM patrones WHERE usuario='".$_GET["usuario"]."'AND publico='Si';";
                             $select2=$db->select($sql2);
                             $nPatrones=count($select2);
-                            // Se recore el array de la consulta
-                            foreach ($select as $key => $valor) {
-                                foreach ($valor as $campo => $value) {
+			    if($nPatrones!=0){
+			       // Se recore el array de la consulta
+			       foreach ($select as $key => $valor) {
+				   foreach ($valor as $campo => $value) {
 
-                                    if($campo==="patron"){ // Muestra la foto
-                                        echo "<a href='../view/patronesAmigo.php?usuario=".$_GET["usuario"]."'><img src='".$value."' alt='patron'/></a><br /><br />";
-                                    }
-                                }
-                            }
+				       if($campo==="patron"){ // Muestra la foto
+					   echo "<a href='../view/patronesAmigo.php?usuario=".$_GET["usuario"]."'><img src='".$value."' alt='patron'/></a><br /><br />";
+				       }
+				   }
+			       }
+			    }
                             if($nPatrones>2){
                                 echo "<p id='masPatrones'><a href='../view/patronesAmigo.php?usuario=".$_GET["usuario"]."'>Ver patrones</a><p>";
                             }
